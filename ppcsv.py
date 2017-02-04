@@ -8,13 +8,8 @@ import sys
 import time
 from pyprimesieve import primes
 
-__author__ = "David Kevin Britt"
+
 __copyright__ = "Copyright (C) 2017 David Kevin Britt"
-__license__ = "GPL 3.1"
-__version__ = "1.1.0"
-__maintainer__ = "David Kevin Britt"
-__email__ = "dkbritt64118@gmail.com"
-__status__ = "Production"
 
 # This program is free software and can be edited and modified.
 #    it under the terms of the GNU General Public License as published by
