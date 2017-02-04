@@ -1,2 +1,2 @@
 # ppcsv
-python prime lister list saver to primelist.csv and profiler using Bprofile
+python prime lister and numbers are saved to primelist.csv
