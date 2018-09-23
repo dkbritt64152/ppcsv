@@ -5,4 +5,4 @@ Requires pyprimesieve
 
 Windows binary ppcsv.exe usage:  ppcsv N  for example ppcsv 10000
 
-Binary produced using pyinstaller.
+Binary produced using pyinstaller
