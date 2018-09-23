@@ -1,22 +1,21 @@
-# /bin/python/env/python
-# -*- coding: utf-8 -*-
+# !/usr/bin/python
+# - * -coding: utf - 8 - * -
 
-""" Displays a list of Pmres from 1 to N."""
-from __future__ import print_function
-import csv
 import sys
+import csv
 import time
 from pyprimesieve import primes
 
 __author__ = "David Kevin Britt"
 __copyright__ = "Copyright (C) 2017 David Kevin Britt"
 __license__ = "GPL 3.1"
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 __maintainer__ = "David Kevin Britt"
 __email__ = "dkbritt64118@gmail.com"
 __status__ = "Production"
 
-# This program is free software and can be edited and modified.
+
+#    This program is free software and can be edited and modified.
 #    it under the terms of the GNU General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
 #    (at your option) any later version.
@@ -30,27 +29,30 @@ __status__ = "Production"
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-if len(sys.argv) < 2:
-    sys.stderr.write('Usage: ppcsvbp (N) an integer, as upper limit.')
-    print('List also written to primelist.csv')
-    sys.exit(1)
-else:
-    limit_max = sys.argv[1]
-answer = [primes(int(limit_max))]
-
-
 def main():
-    """    Will print the list to the screen.. """
+
+    """
+Usage: python pyprimer2.py (N) where N is the upper limit.
+For Example python ppcsv.py 10000 ""
+    """
 
 
-start_time = time.clock()
 limit_max = sys.argv[1]
-print(answer)
-with open('primelist.csv', 'w', newline='') as f:
-    writer = csv.writer(f)
-    writer.writerows([primes(int(limit_max))])
-run_time = ((time.clock() - start_time)*1000)
+csvprime_list = [primes(int(limit_max))]
+start_time = time.clock()
+
+# If you wish to print to screen, uncomment next line.
+# print(csvprime_list)
+
+with open('primelist.csv', 'w', 1000000000) as file_iter:
+    writer = csv.writer(file_iter)
+    writer.writerows(csvprime_list)
+run_time = (time.clock() - start_time) * 1000
 if run_time < 1000:
     print('\n', run_time, ' milliseconds')
 else:
-    print('\n', run_time/1000, ' seconds')
+    print('\n', run_time / 1000, ' seconds')
+
+if __name__ == "__main__":
+    main()
+print(main.__doc__)
