@@ -7,7 +7,7 @@ import time
 from pyprimesieve import primes
 
 
-__copyright__ = "Copyright (C) 2017 David Kevin Britt"
+__copyright__ = "Copyright (C) 10-28-2018 David Kevin Britt"
 __license__ = "GPL 3.1"
 __version__ = "1.1.1"
 __maintainer__ = "David Kevin Britt"
